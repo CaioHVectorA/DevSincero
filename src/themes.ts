@@ -1,0 +1,22 @@
+export const THEMES = [
+    'Javascript[zoar sem tipagem, zoar a lang por ser modinha, zoar o npm, zoar que JS não nasceu pra ser backend, zoar por ser linguagem gambiarra, zoar por ser lenta, zoar por ter mil frameworks novos por dia, zoar por quebrar em produção sem motivo aparente]',
+    'Python[zoar por ser lenta, zoar por ser modinha, zoar por ser linguagem de script, zoar o nome, zoar por ser feia, zoar por causa da indentação, zoar por ser a linguagem favorita dos cientistas de dados que não sabem programar]',
+    'Java[zoar por ser lenta, zoar por ser verbosa, zoar por ser feia, zoar por ser antiga, zoar por ser corporativa, zoar por ser muito adotada, zoar por ser ruim, zoar pela quantidade absurda de Design Patterns, zoar pelo Spring Boot que faz mágica]',
+    'Else[zoar por ser desnecessário, zoar por não ser early return, zoar por criar código espaguete, zoar por ser a escolha dos programadores preguiçosos]',
+    'TDD[zoar por não ser muito adotado, zoar por ser lento, zoar por ser chato, zoar por ser coisa de gente metódica demais, zoar porque ninguém tem tempo pra isso na vida real]',
+    'DDD[zoar por não ser muito aplicado, zoar por ser complexo, zoar por ser chato, zoar por ser modinha, zoar porque ninguém entende direito, zoar por ter nomes fancy demais]',
+    'Clean code[zoar por ser chato, zoar por ser modinha, zoar por ser desnecessário, zoar o Uncle Bob[zoar por ser chato, zoar por ser velho, zoar por ditar regras, zoar por falar demais e codar de menos]]',
+    'React[zoar por ter um novo hook a cada 5 minutos, zoar por ser pesado, zoar por ser over-engineering para sites simples, zoar pelo JSX ser uma aberração]',
+    'VIM, NEOVIM[zoar por ser coisa de nerd old school, zoar porque ninguém sabe sair dele, zoar por ser difícil demais de aprender, zoar por ser inútil em 2024]',
+    'Produtividade[zoar por ser buzzword de coach, zoar por ser desculpa pra trabalhar mais, zoar pelos 500 métodos milagrosos que não funcionam]',
+    'Carreira[zoar pela síndrome do impostor generalizada, zoar pelos títulos pomposos tipo "Ninja", "Rockstar", "Guru"]',
+    'Soft skills[zoar por ser desculpa pra contratar gente que não sabe codar, zoar por ser impossível de medir, zoar por ser buzzword de RH]',
+    'Hard skills[zoar pela obsolescência programada, zoar pela necessidade de aprender 20 tecnologias novas por ano]',
+    'Frontend[zoar por ser só "CSS e firula", zoar pela guerra infinita de frameworks, zoar por ter que suportar o IE]',
+    'Backend[zoar por ser o patinho feio invisível, zoar por ser where the real magic happens, zoar por ser coisa de antissocial]',
+    'Fullstack[zoar por ser jack of all trades, master of none, zoar por ser dev que faz tudo pela metade, zoar por ser exploração trabalhista]',
+    'Mobile[zoar pela fragmentação do Android, zoar pelo autoritarismo da Apple, zoar por ter que lidar com milhões de tamanhos de tela]',
+    'Flutter x React Native[zoar o Flutter por ser coisa do Google que vai morrer logo, zoar o React Native por ser lento, zoar ambos por serem soluções híbridas inferiores]',
+    'CLT x PJ[zoar CLT por ser coisa de quem gosta de segurança demais, zoar PJ por ser exploitation disfarçada de empreendedorismo]',
+    'Home Office x Presencial[zoar Home Office por ser desculpa pra trabalhar de pijama, zoar Presencial por ser coisa de chefe old school que gosta de micromanagement]'
+]
