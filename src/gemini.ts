@@ -1,5 +1,8 @@
 import fs from 'fs'
 import { type Content, type GenerateContentRequest, GoogleGenerativeAI } from "@google/generative-ai";
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_KEY as string);
 const system_prompt = fs.readFileSync('prompt.md', 'utf8')
 const messages = [] satisfies Content[]

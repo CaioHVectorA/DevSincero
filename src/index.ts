@@ -4,7 +4,7 @@ import { CronJob } from 'cron';
 import * as process from 'process';
 import { gemini } from './gemini';
 import { THEMES } from './themes';
-
+dotenv.config();
 function mountRequest({
     type,
     content,
@@ -35,7 +35,8 @@ async function main() {
         const response = await gemini(req)
         await agent.login({ identifier: process.env.BLUESKY_USERNAME!, password: process.env.BLUESKY_PASSWORD!})
         const rt = new RichText({ text: `${response} \n #bolhadev` })
-        await rt.detectFacets(agent)
+        console.log(response)
+          await rt.detectFacets(agent)
         console.log(rt.text)
         const post = await agent.post({
               $type: 'app.bsky.feed.post',
@@ -55,10 +56,6 @@ async function main() {
         tries = 0;
     } catch (error) {
         console.error(error);
-        if (tries < 5) {
-            tries++;
-            main();
-        }
     }
 }
 main();
