@@ -1,4 +1,4 @@
-import { AtpAgent } from '@atproto/api';
+import { AtpAgent, RichText } from '@atproto/api';
 import * as dotenv from 'dotenv';
 import { CronJob } from 'cron';
 import * as process from 'process';
@@ -33,9 +33,24 @@ async function main() {
         const req = mountRequest({ type: "post" });
         const response = await gemini(req)
         await agent.login({ identifier: process.env.BLUESKY_USERNAME!, password: process.env.BLUESKY_PASSWORD!})
-        await agent.post({
-            text: response,
-        });
+        const rt = new RichText({ text: `${response} \n #bolhadev` })
+        await rt.detectFacets(agent)
+        console.log(rt.text)
+        const post = await agent.post({
+              $type: 'app.bsky.feed.post',
+              text: rt.text,
+              facets: rt.facets,
+              createdAt: new Date().toISOString(),
+        })
+        const replyText = "cc @sseraphini.bsky.social @samsantosb.bsky.social"
+        const repl = new RichText({ text: replyText })
+        await repl.detectFacets(agent)
+      agent.post({ reply: { parent: post, root: post }, 
+        $type: 'app.bsky.feed.post',
+        text: repl.text,
+        facets: repl.facets,
+        createdAt: new Date().toISOString(),
+      })
         tries = 0;
     } catch (error) {
         console.error(error);
