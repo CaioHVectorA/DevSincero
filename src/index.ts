@@ -14,12 +14,13 @@ function mountRequest({
     content?: string;
     user?: string;
   }) {
+    const theme = THEMES[Math.floor(Math.random() * THEMES.length)];
     return JSON.stringify({
       type,
       date: new Date().toUTCString(),
       content: content || "null",
       user: user || "null",
-      theme: THEMES[Math.floor(Math.random() * THEMES.length)],
+      theme,
     });
   }
 // Create a Bluesky Agent 
